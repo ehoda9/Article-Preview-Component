@@ -182,7 +182,11 @@ main .container .left_side .desc::first-line {
 .open-share-lg.activeOpacity {
   opacity: 100% !important;
 }
-
+@media screen and (min-width: 1366px){
+  .main .container .right_side{
+  background-size:cover !important;
+  }
+}
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .container {
     max-width: 80% !important;
