@@ -1,0 +1,141 @@
+.none {
+  display: none !important;
+}
+body {
+  background-color: $CardBg-icons;
+}
+main {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  background-color: $CardBg-icons;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  .container {
+    display: grid;
+    grid-template-columns: 0.644fr 1fr;
+    background-color: white;
+    max-width: 50.7%;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 7px 1px rgba(216, 216, 216, 0.448);
+
+    .right_side {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      background-image: url(../images/drawers.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .left_side {
+      padding: 1.4em 3em;
+      .title {
+        color: $Heading-userName-SocialBg-BtnHover;
+        font-weight: 700;
+        font-size: 2.05rem;
+        line-height: 1.35;
+      }
+
+      .desc {
+        color: $ParaGraph-Icon-ShareWord;
+        font-weight: 500;
+        letter-spacing: 0.45px;
+        font-size: 1.23rem;
+        line-height: 1.6;
+        margin-bottom: 1.7em;
+      }
+
+      .desc::first-line {
+        font-size: 1.22rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}
+
+/* card author */
+.card_author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.4em;
+  margin-bottom: 1em;
+  position: relative;
+  .open-share-lg {
+    background-color: $Heading-userName-SocialBg-BtnHover;
+    display: flex;
+    position: absolute;
+    width: 170px;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 150%;
+    padding: 1.2em 1.3em;
+    gap: 1em;
+    border-radius: 15px;
+    opacity: 0%;
+    z-index: 1;
+    transition: 0.3s;
+    .title_share {
+      font-size: 1.3rem;
+      color: $ParaGraph-Icon-ShareWord;
+    }
+  }
+  .open-share-lg::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 15px;
+    border-color: $Heading-userName-SocialBg-BtnHover transparent transparent
+      transparent;
+  }
+
+  .author {
+    display: flex;
+    gap: 15px;
+    img {
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+    }
+    .author_info {
+      .username {
+        font-weight: 700;
+        color: $Heading-userName-SocialBg-BtnHover;
+        font-size: 1.32rem;
+      }
+      .date {
+        color: $Bg-Date-BtnBg;
+      }
+    }
+  }
+  .share {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    width: 31.5px;
+    height: 31.5px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgb(239, 239, 239);
+    transition: 0.3s;
+  }
+}
+/* For Js */
+.share.active {
+  background-color: $Heading-userName-SocialBg-BtnHover !important;
+}
+.open-share-lg.activeOpacity {
+  opacity: 100% !important;
+}

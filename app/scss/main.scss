@@ -1,0 +1,12 @@
+// ## Main Colors ## \\
+//Heading-userName-SocialBg-BtnHover
+$Heading-userName-SocialBg-BtnHover: hsl(217, 19%, 35%);
+//ParaGraph-Icon-ShareWord
+$ParaGraph-Icon-ShareWord: hsl(214, 17%, 51%);
+//Bg-Date-BtnBg
+$Bg-Date-BtnBg: hsl(212, 23%, 69%);
+//CardBg-icons
+$CardBg-icons: hsl(210, 46%, 95%);
+
+@import "./page";
+@import "./breakpoints";
